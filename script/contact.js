@@ -46,7 +46,7 @@ export function changeData(contactIndex, propertyIndex, pageInfo, event) {
 export function openAdditionalInfo(num) {
     this.classList.toggle("active");
     /* open and close window changing it's height */
-    const addPart = document.querySelectorAll(".contact_addPart");
+    const addPart = document.querySelectorAll(".contact__addPart");
     if (addPart[num].style.maxHeight){
        addPart[num].style.maxHeight = null;
      } else {

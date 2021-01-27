@@ -27,7 +27,7 @@ export function changeContactsList(pageInfo, currentPageNumber) {
     const phone = document.querySelectorAll(".phone__value");
     const addInfo = document.querySelectorAll(".addPart__value");
     const contacts = document.querySelectorAll(".list__contact");
-    const addPart = document.querySelectorAll(".contact_addPart");
+    const addPart = document.querySelectorAll(".contact__addPart");
     
     for(let i = 0; i < pageInfo.currentContactsCount; i++) {
         const contactNumber = (currentPageNumber - 1) * pageInfo.currentContactsCount + i;
@@ -77,7 +77,7 @@ export function createNewContact(object) {
                         </div>
                     </div>
                 </div>
-                <div tabindex="0" class="contact_addPart">
+                <div class="contact__addPart">
                     <div class="addPart__row">
                         <div class="addPart__column">
                             <div class="addPart__property">name*:</div>
