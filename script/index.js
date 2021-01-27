@@ -10,7 +10,7 @@ import { initSearchComponents } from "./searchContact.js"
 async function main() {
 
     /* get necessary data from database */
-    const allContacts = getLocalStorage('contacts');
+    let allContacts = getLocalStorage('contacts');
     if (!allContacts) {
         allContacts = await getData().then(data => data.map(item => ({name: item.name, username: item.username, phone: item.phone, email: item.email}))
         .sort((a, b) => a.name < b.name ? -1 : 1));
